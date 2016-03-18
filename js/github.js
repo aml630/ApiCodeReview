@@ -6,7 +6,8 @@ exports.gitHubSearch = function (userName) {
     console.log(response.length);
     for(var i = 0; i < response.length; i  ++) {
       $(".printOut").append("<div class = 'project'><li class = 'red'> Name: " + response[i].name + "</li>");
-      $(".printOut").append("<li> Description " + response[i].description + "</li></div>");
+      $(".printOut").append("<li> Description " + response[i].description + "</li>");
+      $(".printOut").append("</div>")
     }
 
   }).fail(function(error){
