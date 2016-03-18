@@ -7,8 +7,9 @@ $red : #FF00FF;
   background: $gray;
   border: 3px solid black;
     padding: 40px 80px;
+    height: 70px;
   .red {
-    color: red;
+    color: $green;
   }
 }
 
@@ -16,4 +17,7 @@ $red : #FF00FF;
  height: 200px;
  width: 200px;
  border-radius: 50%;
+}
+.printPic {
+ text-align: center;
 }
