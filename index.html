@@ -4,22 +4,31 @@
       <link rel="stylesheet" href="build/css/styles.css">
       <script src="build/js/vendor.min.js"></script>
       <script type="text/javascript" src="build/js/app.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
       <title>GitHub User Search</title>
    </head>
    <body>
+
+     <!-- //////Questions:
+     Why isnt materialize working from my bower?
+     why cant i return an api call?
+     why not use react in class? -->
       <div class="container">
         <h1>GitHub Search Project</h1>
-        <h2>Go ahead, search a username</h2>
-        <h3>Profile Search</h3>
-        <form id = "profileSearch">
-          <input id = "profileUserName" placeholder = "Search Username">
-          <button>Find Their Wonderful Face + Name!</button>
+        <div class="card-panel"><h2>Go ahead, search a username</h2></div>
+       <div class="card-panel teal lighten-2">  <h3>Profile Search</h3></div>
+       <div class="input-field col s6">
+        <form class = "input-field" id = "profileSearch">
+          <input for="first_name" id = "profileUserName" placeholder = "Search Username">
+          <button class="waves-effect waves-light btn-large">Find Their Wonderful Face + Name!</button>
         </form>
+      </div>
         <div class = "row">
           <div class = "printProfile">
           </div>
           <form id = "search">
-            <button>Find Their Wonderful Work!</button>
+            <button class="waves-effect waves-light btn-large">Find Their Wonderful Work!</button>
           </form>
         <div class = "printName col-sm-4"></div>
         <div class = "printDescription col-sm-4"></div>

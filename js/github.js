@@ -9,9 +9,9 @@ exports.gitHubSearch = function(userName) {
         // console.log(response);
         $(".printPic").append("<img class = 'round' src = '" + response[0].owner.avatar_url + "'>");
         for (var i = 0; i < response.length; i++) {
-            $(".printName").append("<div class = 'project'><a href = '" + response[i].html_url + "'><li class = 'red'> Name: " + response[i].name + "</li></a>");
-            $(".printDescription").append("<div class = 'project'><li> Description " + response[i].description + "</li></div>");
-            $(".printDate").append("<div class = 'project'><li> Created At: " + moment(response[i].created_at).format("MMMM Do YYYY, h:mm:ss a") + "</li></div>");
+            $(".printName").append("<div class = 'card-panel teal lighten-5 project'><a href = '" + response[i].html_url + "'><li> Name: " + response[i].name + "</li></a>");
+            $(".printDescription").append("<div class = 'card-panel  teal lighten-5 project'><li> Description " + response[i].description + "</li></div>");
+            $(".printDate").append("<div class = 'card-panel teal lighten-5 project'><li> Created At: " + moment(response[i].created_at).format("MMMM Do YYYY, h:mm:ss a") + "</li></div>");
         }
     }).fail(function(error) {
         console.log(error.responseJSON.message);
@@ -25,7 +25,7 @@ exports.profileSearch = function(userName) {
         $(".printProfile").text(" ");
         $("#search").show();
         $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey).then(function(response) {
-            $(".printProfile").append("<img class = 'round' src = '" + response.avatar_url + "'><li> Email: " + response.email + "</li><li> Name: " + response.name + "</li><li> Followers: " + response.followers + "</li><li> Following: " + response.following + "</li>");
+            $(".printProfile").append("<div class='card blue-grey darken-1'><img class = 'z-depth-3 round' src = '" + response.avatar_url + "'><li> Email: " + response.email + "</li><li> Name: " + response.name + "</li><li> Followers: " + response.followers + "</li><li> Following: " + response.following + "</li></div>");
         }).fail(function(error) {
             console.log(error.responseJSON.message);
         });
