@@ -1,32 +1,6 @@
 $gray : #d3d3d3;
 $green : #75B975;
 $red : #FF00FF;
-//
-// .box {
-//   background: $gray;
-//   border: 3px solid black;
-//   padding: 40px 80px;
-//   .btn {
-//     font-weight: bold;
-//     text-align: center;
-//     background: $green;
-//     color: white;
-//   }
-// }
-//
-// .btn {
-//   font-weight: bold;
-//   text-align: center;
-//   background: $green;
-//   color: white;
-// }
-//
-// #initialMap {
-//   height: 300px;
-//   width: 300px;
-//   background-color: black;
-// float: right;
-// }
 
 
 .project {
@@ -36,4 +10,10 @@ $red : #FF00FF;
   .red {
     color: red;
   }
+}
+
+.round {
+ height: 200px;
+ width: 200px;
+ border-radius: 50%;
 }
