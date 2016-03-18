@@ -12,8 +12,9 @@ exports.gitHubSearch = function (userName) {
     for(var i = 0; i < response.length; i  ++) {
       $(".printName").append("<div class = 'project'><a href = '"+response[i].html_url+"'><li class = 'red'> Name: " + response[i].name + "</li></a>");
       $(".printDescription").append("<div class = 'project'><li> Description " + response[i].description + "</li></div>"  );
-      $(".printDate").append("<div class = 'project'><li> Date " + response[i].created_at + "</li></div>"  );
+      $(".printDate").append("<div class = 'project'><li> Created At: " + moment(response[i].created_at).format("MMMM Do YYYY, h:mm:ss a") + "</li></div>"  );
 
+// 2016-01-13T00:03:52Z
     }
 
   }).fail(function(error){
